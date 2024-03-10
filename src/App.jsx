@@ -14,6 +14,7 @@ import {
 } from "react-router-dom";
 import React, { useContext } from 'react';
 import { DarkModeContext } from './context/darkModeContext';
+import { AuthContext } from "./context/authContext";
 
 
 
@@ -21,7 +22,7 @@ import { DarkModeContext } from './context/darkModeContext';
 function App() {
 
   // const currentUser =false;
-  const currentUser =true;
+  const {currentUser} =useContext(AuthContext);
 
   const {darkMode} = useContext(DarkModeContext);
 
